@@ -131,6 +131,57 @@
       background:linear-gradient(135deg,rgba(10,136,184,.08),rgba(10,52,112,.04));
       border-color:rgba(10,136,184,.35)
     }
+
+    .speaker-card{
+      display:grid;grid-template-columns:1.25fr .75fr;gap:26px;align-items:stretch;
+      background:linear-gradient(135deg,#ffffff 0%,#f7fbfe 58%,#edf6fb 100%);
+    }
+    .speaker-kicker{
+      color:var(--blue);font-weight:800;font-size:.82rem;text-transform:uppercase;
+      letter-spacing:.08em;margin-bottom:9px;
+    }
+    .speaker-title{
+      margin:0;color:var(--navy);font-size:clamp(1.45rem,3vw,2.15rem);
+      line-height:1.15;letter-spacing:-.03em;
+    }
+    .speaker-text{color:var(--muted);margin:14px 0 0;font-size:1rem}
+    .speaker-topics{
+      border-left:1px solid var(--line);padding-left:24px;display:flex;
+      flex-direction:column;justify-content:center;gap:10px;
+    }
+    .speaker-topic{display:flex;gap:10px;align-items:flex-start;color:#344156}
+    .speaker-topic b{color:var(--navy)}
+    .enthusia-card{
+      background:linear-gradient(135deg,var(--navy),#075f8f);
+      color:white;border:none;display:grid;grid-template-columns:1.15fr .85fr;
+      gap:24px;align-items:center;
+    }
+    .enthusia-card h3{margin:0 0 10px;font-size:1.75rem;letter-spacing:-.03em}
+    .enthusia-card p{margin:0;color:rgba(255,255,255,.83)}
+    .demo-access{
+      background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.22);
+      border-radius:16px;padding:18px;
+    }
+    .demo-access .label{font-size:.76rem;text-transform:uppercase;letter-spacing:.09em;opacity:.78}
+    .credential{display:flex;justify-content:space-between;gap:18px;margin-top:8px}
+    .credential code{
+      background:rgba(255,255,255,.12);padding:3px 8px;border-radius:7px;color:#fff
+    }
+    .demo-btn{
+      display:inline-flex;margin-top:15px;background:#fff;color:var(--navy);
+      text-decoration:none;font-weight:800;padding:11px 14px;border-radius:10px
+    }
+    .client{
+      flex-direction:row;align-items:center;justify-content:flex-start;gap:12px;
+    }
+    .client-logo{
+      width:38px;height:38px;object-fit:contain;border-radius:9px;flex:0 0 auto;
+      background:#fff;border:1px solid #e6edf3;padding:4px;
+    }
+    .client-copy{display:flex;flex-direction:column;min-width:0}
+    .client-copy strong{line-height:1.18}
+    .client-copy span{line-height:1.25}
+
     footer{padding:42px 0 56px;color:var(--muted);font-size:.9rem;text-align:center}
     .note{margin-top:18px;color:#7a8492;font-size:.8rem}
     @media(max-width:820px){
@@ -138,7 +189,8 @@
       .hero{padding-top:38px}
       .hero-grid{grid-template-columns:1fr;gap:30px}
       .portrait{margin:0;width:230px}
-      .two-col,.clients{grid-template-columns:1fr}
+      .two-col,.clients,.speaker-card,.enthusia-card{grid-template-columns:1fr}
+      .speaker-topics{border-left:0;border-top:1px solid var(--line);padding-left:0;padding-top:20px}
       h1{font-size:3.2rem}
     }
     @media print{
@@ -156,6 +208,8 @@
         <a href="#perfil">Perfil</a>
         <a href="#formacao">Formação</a>
         <a href="#carreira">Carreira</a>
+        <a href="#palestras">Palestras</a>
+        <a href="#enthusia">EnthusIA</a>
         <a href="#projetos">Projetos</a>
       </nav>
     </div>
@@ -170,7 +224,7 @@
           <p class="roles">Consultor de Gestão | Inteligência Artificial aplicada a negócios | ERP | Controladoria</p>
           <p class="lead">Atuação prática na conexão entre negócios, tecnologia e transformação organizacional, com foco em aplicação de Inteligência Artificial em processos empresariais.</p>
           <div class="actions">
-            <a class="btn primary" href="https://www.linkedin.com/in/waltermcs/" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a class="btn primary" href="https://www.linkedin.com/in/waltermsc/" target="_blank" rel="noopener">LinkedIn ↗</a>
             <a class="btn" href="https://linktr.ee/enthus.consulting" target="_blank" rel="noopener">Linktree ↗</a>
           </div>
         </div>
@@ -184,7 +238,7 @@
       <div class="wrap">
         <div class="section-title"><div class="icon">◎</div><h2>Resumo profissional</h2></div>
         <div class="card summary">
-          Profissional com sólida trajetória em gestão, tecnologia, controladoria e implantação de soluções empresariais. Atua com foco na aplicação prática de Inteligência Artificial em empresas, especialmente em operações de PMEs, combinando visão estratégica, experiência em ERP e formação de equipes.
+          Profissional com sólida trajetória em gestão, tecnologia, controladoria e implantação de soluções empresariais. Atua com foco na aplicação prática de Inteligência Artificial em empresas, especialmente em operações de alta demanda operacional, combinando visão estratégica, experiência em ERP e formação de equipes.
         </div>
       </div>
     </section>
@@ -207,10 +261,31 @@
         <div id="carreira">
           <div class="section-title"><div class="icon">↗</div><h2>Destaques de carreira</h2></div>
           <div class="card highlights">
-            <div class="highlight"><span class="check">✓</span><span>Mais de 22 anos de experiência em consultoria de processos, tecnologias e formação de equipes</span></div>
+            <div class="highlight"><span class="check">✓</span><span>Mais de 23 anos de experiência em consultoria de processos, tecnologias e formação de equipes</span></div>
             <div class="highlight"><span class="check">✓</span><span>Experiência em cargos de gestão nas maiores empresas de ERP do Brasil: TOTVS, Senior e Sankhya</span></div>
             <div class="highlight"><span class="check">✓</span><span>Consultor de Gestão com foco na implantação de IA em empresas</span></div>
             <div class="highlight"><span class="check">✓</span><span>Atuação integrada entre negócios, tecnologia e transformação organizacional</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="palestras">
+      <div class="wrap">
+        <div class="section-title"><div class="icon">🎤</div><h2>Palestras e eventos</h2></div>
+        <div class="card speaker-card">
+          <div>
+            <div class="speaker-kicker">Tema principal</div>
+            <h3 class="speaker-title">Aceleração da adoção de Inteligência Artificial: da experimentação à construção de uma nova capacidade organizacional</h3>
+            <p class="speaker-text">
+              Palestras voltadas a lideranças, gestores e equipes que precisam transformar o interesse por IA em capacidade prática de execução — estruturando pessoas, processos, tecnologia e governança para incorporar a IA ao trabalho real da organização.
+            </p>
+          </div>
+          <div class="speaker-topics">
+            <div class="speaker-topic"><span class="check">✓</span><span><b>Adoção:</b> como sair de iniciativas isoladas e avançar para uso recorrente e orientado a resultado.</span></div>
+            <div class="speaker-topic"><span class="check">✓</span><span><b>Capacidade organizacional:</b> pessoas, processos, dados, tecnologia e governança trabalhando em conjunto.</span></div>
+            <div class="speaker-topic"><span class="check">✓</span><span><b>Aplicação prática:</b> identificação de oportunidades reais de produtividade, automação e melhoria da tomada de decisão.</span></div>
           </div>
         </div>
       </div>
@@ -231,43 +306,64 @@
       </div>
     </section>
 
+
+    <section id="enthusia">
+      <div class="wrap">
+        <div class="section-title"><div class="icon">AI</div><h2>EnthusIA — Plataforma de adoção de IA</h2></div>
+        <div class="card enthusia-card">
+          <div>
+            <h3>Da intenção à capacidade de execução</h3>
+            <p>
+              Plataforma utilizada pela EnthusIA para apoiar e acelerar o processo de adoção de Inteligência Artificial nas organizações, conectando diagnóstico, oportunidades, priorização e evolução da capacidade de uso da tecnologia.
+            </p>
+            <a class="demo-btn" href="https://enthusia-demo.up.railway.app/" target="_blank" rel="noopener">Acessar demonstração ↗</a>
+          </div>
+          <div class="demo-access">
+            <div class="label">Acesso demonstrativo</div>
+            <div class="credential"><span>Usuário</span><code>demo</code></div>
+            <div class="credential"><span>Senha</span><code>demo</code></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="projetos">
       <div class="wrap">
         <div class="section-title"><div class="icon">▣</div><h2>Empresas e projetos atendidos</h2></div>
         <div class="clients">
-          <div class="client"><strong>SBK Capital</strong><span>Créditos</span></div>
-          <div class="client"><strong>Prepago</strong><span>Precatórios</span></div>
-          <div class="client"><strong>Netmoney</strong><span>Fintech</span></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=sbkcapital.com.br&sz=128" alt="Logo SBK Capital" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>SBK Capital</strong><span>Créditos</span></div></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=prepago.com.br&sz=128" alt="Logo Prepago" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>Prepago</strong><span>Precatórios</span></div></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=netmoney.com.br&sz=128" alt="Logo Netmoney" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>Netmoney</strong><span>Fintech</span></div></div>
 
-          <div class="client"><strong>Grupo Cruvinel - EvidJuri</strong><span>Perícia</span></div>
-          <div class="client"><strong>Paniago</strong><span>Advocacia - Bradesco</span></div>
-          <div class="client"><strong>Audicon</strong><span>Contabilidade</span></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=evidjuri.com.br&sz=128" alt="Logo Grupo Cruvinel - EvidJuri" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>Grupo Cruvinel - EvidJuri</strong><span>Perícia</span></div></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=paniago.adv.br&sz=128" alt="Logo Paniago" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>Paniago</strong><span>Advocacia - Bradesco</span></div></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=audiconcontabilidade.com.br&sz=128" alt="Logo Audicon" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>Audicon</strong><span>Contabilidade</span></div></div>
 
-          <div class="client"><strong>Conel Construtora</strong><span>Construção</span></div>
-          <div class="client"><strong>Booker</strong><span>Contabilidade</span></div>
-          <div class="client"><strong>Algar Tech</strong><span>Diretoria de Marketing</span></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=conelconstrutora.com.br&sz=128" alt="Logo Conel Construtora" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>Conel Construtora</strong><span>Construção</span></div></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=bookercontabilidade.com.br&sz=128" alt="Logo Booker" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>Booker</strong><span>Contabilidade</span></div></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=algartech.com&sz=128" alt="Logo Algar Tech" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>Algar Tech</strong><span>Diretoria de Marketing</span></div></div>
 
-          <div class="client"><strong>Cottonbaby</strong><span>Indústria - SC / Floripa</span></div>
-          <div class="client"><strong>FAEPU</strong><span>Fundação</span></div>
-          <div class="client"><strong>Agrelli Serviços Empresariais</strong><span>Contabilidade</span></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=cottonbaby.com.br&sz=128" alt="Logo Cottonbaby" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>Cottonbaby</strong><span>Indústria - SC / Floripa</span></div></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=faepu.org.br&sz=128" alt="Logo FAEPU" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>FAEPU</strong><span>Fundação</span></div></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=agrelli.com.br&sz=128" alt="Logo Agrelli Serviços Empresariais" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>Agrelli Serviços Empresariais</strong><span>Contabilidade</span></div></div>
 
-          <div class="client"><strong>Ferramac</strong><span>Varejo e distribuição</span></div>
-          <div class="client"><strong>Albus Tecnologia</strong><span>ERP Linx</span></div>
-          <div class="client"><strong>Vector FDIC</strong><span>Fundo</span></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=ferramac.com.br&sz=128" alt="Logo Ferramac" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>Ferramac</strong><span>Varejo e distribuição</span></div></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=albustecnologia.com.br&sz=128" alt="Logo Albus Tecnologia" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>Albus Tecnologia</strong><span>ERP Linx</span></div></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=vectorfidc.com.br&sz=128" alt="Logo Vector FDIC" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>Vector FDIC</strong><span>Fundo</span></div></div>
 
-          <div class="client"><strong>Alplastic Embalagens</strong><span>Indústria</span></div>
-          <div class="client"><strong>Licitanet</strong><span>Tecnologia</span></div>
-          <div class="client"><strong>General Instruments</strong><span>Indústria e serviços</span></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=alplastic.com.br&sz=128" alt="Logo Alplastic Embalagens" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>Alplastic Embalagens</strong><span>Indústria</span></div></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=licitanet.com.br&sz=128" alt="Logo Licitanet" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>Licitanet</strong><span>Tecnologia</span></div></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=generalinstruments.com.br&sz=128" alt="Logo General Instruments" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>General Instruments</strong><span>Indústria e serviços</span></div></div>
 
-          <div class="client"><strong>Moore Auditoria</strong><span>Consultoria empresarial</span></div>
-          <div class="client"><strong>Elos.org</strong><span>Gestão de fundos - antiga Eletrosul</span></div>
-          <div class="client"><strong>Corpel Contabilidade</strong><span>BPO contábil e financeiro</span></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=moorebrasil.com.br&sz=128" alt="Logo Moore Auditoria" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>Moore Auditoria</strong><span>Consultoria empresarial</span></div></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=elos.org.br&sz=128" alt="Logo Elos.org" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>Elos.org</strong><span>Gestão de fundos - antiga Eletrosul</span></div></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=corpelcontabilidade.com.br&sz=128" alt="Logo Corpel Contabilidade" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>Corpel Contabilidade</strong><span>BPO contábil e financeiro</span></div></div>
 
-          <div class="client"><strong>Grupo Farroupilha</strong><span>Agronegócio</span></div>
-          <div class="client"><strong>CasAtronaves</strong><span>Varejo digital</span></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=grupofarroupilha.com.br&sz=128" alt="Logo Grupo Farroupilha" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>Grupo Farroupilha</strong><span>Agronegócio</span></div></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=casatronaves.com.br&sz=128" alt="Logo CasAtronaves" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>CasAtronaves</strong><span>Varejo digital</span></div></div>
 
-          <div class="client new"><strong>Verde Urbanismo (Grupo Fernandes)</strong><span>Incorporadora</span></div>
-          <div class="client new"><strong>Moinho 7 Irmãos</strong><span>Silo e indústria · Farinha de trigo</span></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=verdeurbanismo.com.br&sz=128" alt="Logo Verde Urbanismo (Grupo Fernandes)" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>Verde Urbanismo (Grupo Fernandes)</strong><span>Incorporadora</span></div></div>
+          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=moinho7irmaos.com.br&sz=128" alt="Logo Moinho 7 Irmãos" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>Moinho 7 Irmãos</strong><span>Silo e indústria · Farinha de trigo</span></div></div>
         </div>
         <div class="note">Seleção de empresas e projetos apresentada para contextualizar a experiência profissional e os diferentes ambientes de aplicação.</div>
       </div>
