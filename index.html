@@ -175,12 +175,59 @@
       flex-direction:row;align-items:center;justify-content:flex-start;gap:12px;
     }
     .client-logo{
-      width:38px;height:38px;object-fit:contain;border-radius:9px;flex:0 0 auto;
+      width:52px;height:38px;object-fit:contain;border-radius:9px;flex:0 0 auto;
       background:#fff;border:1px solid #e6edf3;padding:4px;
     }
     .client-copy{display:flex;flex-direction:column;min-width:0}
     .client-copy strong{line-height:1.18}
     .client-copy span{line-height:1.25}
+
+
+    .mba-hero-badge{
+      margin-top:24px;max-width:780px;display:flex;gap:14px;align-items:flex-start;
+      padding:15px 17px;border-radius:15px;
+      background:linear-gradient(135deg,rgba(10,52,112,.07),rgba(10,136,184,.11));
+      border:1px solid rgba(10,52,112,.18)
+    }
+    .mba-hero-icon{
+      width:40px;height:40px;border-radius:11px;display:grid;place-items:center;
+      background:white;box-shadow:0 5px 16px rgba(10,52,112,.10);flex:0 0 auto
+    }
+    .mba-hero-badge strong{display:block;color:var(--navy);font-size:1rem;line-height:1.3}
+    .mba-hero-badge span:not(.mba-hero-icon){display:block;color:var(--muted);font-size:.88rem;margin-top:4px}
+    .mba-intro{
+      margin-bottom:18px;background:linear-gradient(135deg,#fff,#f4f9fd);
+      border-color:rgba(10,52,112,.18)
+    }
+    .mba-kicker{
+      color:var(--blue);font-weight:800;text-transform:uppercase;
+      letter-spacing:.09em;font-size:.77rem;margin-bottom:8px
+    }
+    .mba-intro h3{
+      margin:0;color:var(--navy);font-size:clamp(1.4rem,2.5vw,2rem);
+      letter-spacing:-.03em;line-height:1.15
+    }
+    .mba-intro p{margin:13px 0 0;color:var(--muted);max-width:980px}
+    .mba-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .mba-card{
+      display:block;text-decoration:none;background:white;border:1px solid var(--line);
+      border-radius:18px;padding:23px;box-shadow:0 10px 30px rgba(15,44,78,.055);
+      transition:.18s ease;position:relative;overflow:hidden
+    }
+    .mba-card:before{
+      content:"";position:absolute;left:0;top:0;width:100%;height:4px;
+      background:linear-gradient(90deg,var(--navy),var(--cyan))
+    }
+    .mba-card:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(15,44,78,.10)}
+    .mba-card-top{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:13px}
+    .mba-school,.mba-role{
+      display:inline-flex;padding:6px 9px;border-radius:999px;font-size:.72rem;font-weight:800
+    }
+    .mba-school{background:var(--navy);color:white}
+    .mba-role{background:#edf5fa;color:var(--blue)}
+    .mba-card h3{margin:0;color:var(--navy);font-size:1.22rem;line-height:1.25}
+    .mba-card p{color:var(--muted);font-size:.93rem;margin:11px 0 16px}
+    .mba-link{color:var(--blue);font-weight:800;font-size:.9rem}
 
     footer{padding:42px 0 56px;color:var(--muted);font-size:.9rem;text-align:center}
     .note{margin-top:18px;color:#7a8492;font-size:.8rem}
@@ -189,7 +236,7 @@
       .hero{padding-top:38px}
       .hero-grid{grid-template-columns:1fr;gap:30px}
       .portrait{margin:0;width:230px}
-      .two-col,.clients,.speaker-card,.enthusia-card{grid-template-columns:1fr}
+      .two-col,.clients,.speaker-card,.enthusia-card,.mba-grid{grid-template-columns:1fr}
       .speaker-topics{border-left:0;border-top:1px solid var(--line);padding-left:0;padding-top:20px}
       h1{font-size:3.2rem}
     }
@@ -208,6 +255,7 @@
         <a href="#perfil">Perfil</a>
         <a href="#formacao">Formação</a>
         <a href="#carreira">Carreira</a>
+        <a href="#mbas">MBAs</a>
         <a href="#palestras">Palestras</a>
         <a href="#enthusia">EnthusIA</a>
         <a href="#projetos">Projetos</a>
@@ -223,6 +271,15 @@
           <h1>Walter Filho,<br>MSc</h1>
           <p class="roles">Consultor de Gestão | Inteligência Artificial aplicada a negócios | ERP | Controladoria</p>
           <p class="lead">Atuação prática na conexão entre negócios, tecnologia e transformação organizacional, com foco em aplicação de Inteligência Artificial em processos empresariais.</p>
+
+          <div class="mba-hero-badge">
+            <span class="mba-hero-icon">🎓</span>
+            <div>
+              <strong>Idealizador, Coordenador e Professor de MBAs em Inteligência Artificial</strong>
+              <span>Formações executivas voltadas à implementação prática de IA em operações e contabilidade.</span>
+            </div>
+          </div>
+
           <div class="actions">
             <a class="btn primary" href="https://www.linkedin.com/in/waltermsc/" target="_blank" rel="noopener">LinkedIn ↗</a>
             <a class="btn" href="https://linktr.ee/enthus.consulting" target="_blank" rel="noopener">Linktree ↗</a>
@@ -243,6 +300,52 @@
       </div>
     </section>
 
+
+    <section id="mbas">
+      <div class="wrap">
+        <div class="section-title"><div class="icon">🎓</div><h2>Idealização, Coordenação e Docência em MBAs</h2></div>
+
+        <div class="mba-intro card">
+          <div class="mba-kicker">Formação executiva em Inteligência Artificial</div>
+          <h3>Da compreensão da tecnologia à capacidade real de implementação nas organizações</h3>
+          <p>
+            Atuação como <strong>idealizador, coordenador e professor</strong> de programas de pós-graduação
+            concebidos para transformar Inteligência Artificial em capacidade prática de execução.
+            A proposta conecta estratégia, processos, dados, tecnologia, pessoas e governança,
+            aproximando o conteúdo acadêmico dos desafios reais das organizações.
+          </p>
+        </div>
+
+        <div class="mba-grid">
+          <a class="mba-card" href="https://pos.unipam.edu.br/cursos/mba-em-inteligencia-artificial-aplicada-a-operacoes" target="_blank" rel="noopener">
+            <div class="mba-card-top">
+              <span class="mba-school">UNIPAM</span>
+              <span class="mba-role">Idealizador · Coordenador · Professor</span>
+            </div>
+            <h3>MBA em Inteligência Artificial Aplicada a Operações</h3>
+            <p>
+              Formação de líderes funcionais capazes de conectar negócio, processos, dados, tecnologia,
+              pessoas e governança para conduzir a implantação real de IA nas operações.
+            </p>
+            <span class="mba-link">Conhecer o MBA ↗</span>
+          </a>
+
+          <a class="mba-card" href="https://faculdadeebpos.edu.br/direito/pos-graduacao-em-inteligencia-artificial-para-a-contabilidade?utm_source=organic" target="_blank" rel="noopener">
+            <div class="mba-card-top">
+              <span class="mba-school">EBPÓS</span>
+              <span class="mba-role">Idealizador · Coordenador · Professor</span>
+            </div>
+            <h3>Pós-Graduação em Inteligência Artificial Aplicada à Contabilidade</h3>
+            <p>
+              Formação orientada à aplicação prática de IA, automações, bots, microserviços
+              e soluções com e sem código no ambiente contábil.
+            </p>
+            <span class="mba-link">Conhecer a Pós-Graduação ↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section id="formacao">
       <div class="wrap two-col">
         <div>
@@ -250,7 +353,7 @@
           <div class="card">
             <ul class="bullets">
               <li>Mestre em Administração pela Universidade Federal de Uberlândia</li>
-              <li>Coordenador e Professor do MBA em Inteligência Artificial Aplicada à Contabilidade</li>
+              <li><strong>Idealizador, Coordenador e Professor</strong> de MBAs em Inteligência Artificial Aplicada a Operações e à Contabilidade</li>
               <li>Graduado em Ciências Contábeis (UFU)</li>
               <li>MBA em Gerenciamento de Projetos</li>
               <li>Certificações: PMP e PMI-ACP</li>
@@ -331,13 +434,13 @@
       <div class="wrap">
         <div class="section-title"><div class="icon">▣</div><h2>Empresas e projetos atendidos</h2></div>
         <div class="clients">
-          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=sbkcapital.com.br&sz=128" alt="Logo SBK Capital" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>SBK Capital</strong><span>Créditos</span></div></div>
+          <div class="client"><img class="client-logo" src="https://logo.clearbit.com/sbkcapital.com.br?size=128" alt="Logo SBK Capital" loading="lazy" onerror="this.onerror=null;this.src=\'https://www.google.com/s2/favicons?domain=sbkcapital.com.br&sz=128\'" /><div class="client-copy"><strong>SBK Capital</strong><span>Créditos</span></div></div>
           <div class="client">
             <img class="client-logo" src="https://www.google.com/s2/favicons?domain=diamondcapital.com.br&sz=128" alt="Logo Diamond Capital" loading="lazy" onerror="this.style.display='none'" />
             <div class="client-copy"><strong>Diamond Capital</strong><span>Investimentos e gestão de capital</span></div>
           </div>
           
-          <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=netmoney.com.br&sz=128" alt="Logo Netmoney" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>Netmoney</strong><span>Fintech</span></div></div>
+          <div class="client"><img class="client-logo" src="https://logo.clearbit.com/netmoney.com.br?size=128" alt="Logo Netmoney" loading="lazy" onerror="this.onerror=null;this.src=\'https://www.google.com/s2/favicons?domain=netmoney.com.br&sz=128\'" /><div class="client-copy"><strong>Netmoney</strong><span>Fintech</span></div></div>
 
           <div class="client"><img class="client-logo" src="https://www.google.com/s2/favicons?domain=evidjuri.com.br&sz=128" alt="Logo Grupo Cruvinel - EvidJuri" loading="lazy" onerror="this.style.display='none'" /><div class="client-copy"><strong>Grupo Cruvinel - EvidJuri</strong><span>Perícia</span></div></div>
           <div class="client">
