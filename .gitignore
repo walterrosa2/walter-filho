@@ -1,0 +1,6 @@
+# A raiz deste repositório é publicada no GitHub Pages:
+# notas internas de agentes não devem ser versionadas.
+knowledge/
+
+__pycache__/
+.pytest_cache/
